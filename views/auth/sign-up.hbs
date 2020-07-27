@@ -1,0 +1,12 @@
+<form method="POST">
+  <label for="input-username">Username</label>
+  <input id="input-username" type="text" placeholder="Username" name="username" required minlength="3" maxlength="12">
+  
+  <label for="input-password">Password</label>
+  <input id="input-password" type="password" placeholder="Password" name="password" required minlength="3" maxlength="12">
+  <button>Sign Up</button>
+</form>
+
+{{#if error}}
+  <p>There was an error signing up</p>
+{{/if}}

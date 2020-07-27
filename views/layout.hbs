@@ -5,6 +5,16 @@
     <link rel='stylesheet' href='/styles/style.css' />
   </head>
   <body>
+    <nav>
+    {{#if user}}
+      <span>{{user.name}}</span>
+      <a href="/auth/private">Private</a>
+       <a href="/auth/profile">Profile</a>
+    {{else}}
+      <a href="/auth/sign-up">Sign Up</a>
+      <a href="/auth/sign-in">Sign In</a>
+    {{/if}}
+  </nav>
     {{{body}}}
   </body>
 </html>
